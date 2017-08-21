@@ -1,0 +1,19 @@
+<template name="postItem">
+  <view class='post-container'>
+    <view class='post-author-date'>
+      <!--wx:if="{{img}}" 这个是用来判断是否展示的。如果img有值，则展示，否则，则是false不展示。-->
+      <image class='post-author' src='{{authorImg}}'></image>
+      <text class='post-date'>{{date}}</text>
+    </view>
+    <text class='post-title'>{{title}}</text>
+    <image class='post-image' src="{{passage_Img}}"></image>
+    <text class='post-content'>{{passage_content}}{{idx}}</text>
+    <view class='post-like'>
+      <image class='post-like-image' src="{{home}}"></image>
+      <text class='post-like-font'>{{home_num}}</text>
+      <image class='post-like-image' src="{{like}}"></image>
+      <text class='post-like-font'>{{like_num}}</text>
+    </view>
+  </view>
+
+</template>

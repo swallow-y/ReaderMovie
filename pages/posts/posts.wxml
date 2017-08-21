@@ -1,0 +1,24 @@
+<import src='post-item/post-item-template.wxml'/>
+<view>
+
+<!--vertical是设置纵向滚动 vertical='true'，indicator-dots是是否显示点,autoplay是是否自动播放，interval是设置时间间隔-->
+   <swiper  indicator-dots='true' autoplay='true' interval="5000">
+     <swiper-item>
+     <image  src="/images/first.jpg"></image>
+     </swiper-item>
+     <swiper-item>
+     <image  src="/images/sec.jpg"></image>
+     </swiper-item>
+     <swiper-item>
+     <image  src="/images/thir.jpg"></image>
+     </swiper-item>
+   </swiper>
+
+   <block  wx:for="{{post_list}}" wx:for-item="item" wx:for-index="idx">
+     <!--<template >-->
+     <view catchtap="onPostTap" data-postId="{{item.postId}}" >
+        <template is="postItem" data="{{...item}}" />
+     </view>  
+   </block>
+
+</view>
